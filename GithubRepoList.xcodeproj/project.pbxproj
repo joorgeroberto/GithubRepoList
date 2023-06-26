@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		93C964A32A3CEB2F0061B65A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C964A22A3CEB2F0061B65A /* AppDelegate.swift */; };
 		93C964A52A3CEB2F0061B65A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C964A42A3CEB2F0061B65A /* SceneDelegate.swift */; };
-		93C964A72A3CEB2F0061B65A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C964A62A3CEB2F0061B65A /* ViewController.swift */; };
-		93C964AA2A3CEB2F0061B65A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C964A82A3CEB2F0061B65A /* Main.storyboard */; };
 		93C964AC2A3CEB320061B65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C964AB2A3CEB320061B65A /* Assets.xcassets */; };
 		93C964AF2A3CEB320061B65A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C964AD2A3CEB320061B65A /* LaunchScreen.storyboard */; };
 		93C964BA2A3CEB320061B65A /* GithubRepoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C964B92A3CEB320061B65A /* GithubRepoListTests.swift */; };
 		93C964C42A3CEB320061B65A /* GithubRepoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C964C32A3CEB320061B65A /* GithubRepoListUITests.swift */; };
 		93C964C62A3CEB320061B65A /* GithubRepoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C964C52A3CEB320061B65A /* GithubRepoListUITestsLaunchTests.swift */; };
+		93C964D52A3CEE3F0061B65A /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C964D32A3CEE3F0061B65A /* RepoListViewController.swift */; };
+		93C964D82A3CEF310061B65A /* RepoListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C964D72A3CEF310061B65A /* RepoListViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		93C9649F2A3CEB2F0061B65A /* GithubRepoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C964A22A3CEB2F0061B65A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C964A42A3CEB2F0061B65A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93C964A62A3CEB2F0061B65A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93C964A92A3CEB2F0061B65A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93C964AB2A3CEB320061B65A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93C964AE2A3CEB320061B65A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93C964B02A3CEB320061B65A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		93C964BF2A3CEB320061B65A /* GithubRepoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubRepoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C964C32A3CEB320061B65A /* GithubRepoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoListUITests.swift; sourceTree = "<group>"; };
 		93C964C52A3CEB320061B65A /* GithubRepoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93C964D32A3CEE3F0061B65A /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
+		93C964D72A3CEF310061B65A /* RepoListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepoListViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +99,9 @@
 		93C964A12A3CEB2F0061B65A /* GithubRepoList */ = {
 			isa = PBXGroup;
 			children = (
+				93C964D22A3CEDF30061B65A /* ViewController */,
 				93C964A22A3CEB2F0061B65A /* AppDelegate.swift */,
 				93C964A42A3CEB2F0061B65A /* SceneDelegate.swift */,
-				93C964A62A3CEB2F0061B65A /* ViewController.swift */,
-				93C964A82A3CEB2F0061B65A /* Main.storyboard */,
 				93C964AB2A3CEB320061B65A /* Assets.xcassets */,
 				93C964AD2A3CEB320061B65A /* LaunchScreen.storyboard */,
 				93C964B02A3CEB320061B65A /* Info.plist */,
@@ -125,6 +124,15 @@
 				93C964C52A3CEB320061B65A /* GithubRepoListUITestsLaunchTests.swift */,
 			);
 			path = GithubRepoListUITests;
+			sourceTree = "<group>";
+		};
+		93C964D22A3CEDF30061B65A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93C964D32A3CEE3F0061B65A /* RepoListViewController.swift */,
+				93C964D72A3CEF310061B65A /* RepoListViewController.storyboard */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C964D82A3CEF310061B65A /* RepoListViewController.storyboard in Resources */,
 				93C964AF2A3CEB320061B65A /* LaunchScreen.storyboard in Resources */,
 				93C964AC2A3CEB320061B65A /* Assets.xcassets in Resources */,
-				93C964AA2A3CEB2F0061B65A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93C964A72A3CEB2F0061B65A /* ViewController.swift in Sources */,
 				93C964A32A3CEB2F0061B65A /* AppDelegate.swift in Sources */,
+				93C964D52A3CEE3F0061B65A /* RepoListViewController.swift in Sources */,
 				93C964A52A3CEB2F0061B65A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		93C964A82A3CEB2F0061B65A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93C964A92A3CEB2F0061B65A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93C964AD2A3CEB320061B65A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +442,7 @@
 				INFOPLIST_FILE = GithubRepoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = RepoListViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +470,7 @@
 				INFOPLIST_FILE = GithubRepoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = RepoListViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
