@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RepoDetailsViewController: UIViewController {
 
@@ -14,21 +15,27 @@ class RepoDetailsViewController: UIViewController {
     @IBOutlet weak var ownersNameLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
 
+    var viewModel: RepoDetailsViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.setupText()
+        self.setupAvatar()
     }
     
+    public func setupText() {
+        title = viewModel?.repository.name
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        self.repoNameLabel.text = self.viewModel?.repository.fullName
+        self.descriptionLabel.text = self.viewModel?.repository.description
+        self.ownersNameLabel.text = self.viewModel?.repository.owner.login
     }
-    */
 
+    public func setupAvatar() {
+        self.avatarImage.layer.borderColor = UIColor.black.cgColor
+        self.avatarImage.layer.borderWidth = 1
+        self.avatarImage.layer.cornerRadius = 50
+        avatarImage.kf.setImage(with: viewModel?.avatarURL)
+    }
 }

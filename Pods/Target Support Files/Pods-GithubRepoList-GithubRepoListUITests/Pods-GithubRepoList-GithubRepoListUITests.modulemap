@@ -1,0 +1,6 @@
+framework module Pods_GithubRepoList_GithubRepoListUITests {
+  umbrella header "Pods-GithubRepoList-GithubRepoListUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

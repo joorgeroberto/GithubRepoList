@@ -30,8 +30,12 @@ class RepoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let repoRetailsViewController = UIStoryboard(name: "RepoDetailsViewController", bundle: nil).instantiateInitialViewController() as! RepoDetailsViewController
-        self.navigationController?.pushViewController(repoRetailsViewController, animated: true)
+        let repoDetailsViewController = UIStoryboard(name: "RepoDetailsViewController", bundle: nil).instantiateInitialViewController() as! RepoDetailsViewController
+        
+        let repository = self.viewModel.repositories[indexPath.row]
+        repoDetailsViewController.viewModel = RepoDetailsViewModel(repository: repository)
+
+        self.navigationController?.pushViewController(repoDetailsViewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
