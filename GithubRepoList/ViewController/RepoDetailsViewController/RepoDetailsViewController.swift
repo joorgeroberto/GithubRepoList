@@ -15,8 +15,19 @@ class RepoDetailsViewController: UIViewController {
     @IBOutlet weak var ownersNameLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
 
-    var viewModel: RepoDetailsViewModel?
+    var coordinator: RepoDetailCoordinator?
 
+    private var viewModel: RepoDetailsViewModel
+
+    init(viewModel: RepoDetailsViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,17 +36,17 @@ class RepoDetailsViewController: UIViewController {
     }
     
     public func setupText() {
-        title = viewModel?.repository.name
+        title = viewModel.repository.name
 
-        self.repoNameLabel.text = self.viewModel?.repository.fullName
-        self.descriptionLabel.text = self.viewModel?.repository.description
-        self.ownersNameLabel.text = self.viewModel?.repository.owner.login
+        self.repoNameLabel.text = self.viewModel.repository.fullName
+        self.descriptionLabel.text = self.viewModel.repository.description
+        self.ownersNameLabel.text = self.viewModel.repository.owner.login
     }
 
     public func setupAvatar() {
         self.avatarImage.layer.borderColor = UIColor.black.cgColor
         self.avatarImage.layer.borderWidth = 1
         self.avatarImage.layer.cornerRadius = 50
-        avatarImage.kf.setImage(with: viewModel?.avatarURL)
+        avatarImage.kf.setImage(with: viewModel.avatarURL)
     }
 }

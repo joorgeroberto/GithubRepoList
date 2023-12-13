@@ -7,16 +7,20 @@
 
 import UIKit
 
-// MVVM
-/*Model
- View - Storyboard e a View Controller
- View Model
- */
-
 class RepoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet private weak var tableView: UITableView!
-    var viewModel = RepoListViewModel()
+    var coordinator: RepoListCoordinator?
+    private var viewModel: RepoListViewModel
+
+    init(viewModel: RepoListViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +34,8 @@ class RepoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let repoDetailsViewController = UIStoryboard(name: "RepoDetailsViewController", bundle: nil).instantiateInitialViewController() as! RepoDetailsViewController
-        
         let repository = self.viewModel.repositories[indexPath.row]
-        repoDetailsViewController.viewModel = RepoDetailsViewModel(repository: repository)
-
-        self.navigationController?.pushViewController(repoDetailsViewController, animated: true)
+        self.coordinator?.goToDetailsPage(repository: repository)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
